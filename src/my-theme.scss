@@ -1,0 +1,80 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// TCS Brand
+/* For use in src/lib/core/theming/_palette.scss */
+$tpalette: (
+    50 : #e2f2fe,
+    100 : #b7ddfd,
+    200 : #87c7fc,
+    300 : #56b1fb,
+    400 : #32a0fa,
+    500 : #0e8ff9,
+    600 : #0c87f8,
+    700 : #0a7cf7,
+    800 : #0872f6,
+    900 : #0460f5,
+    A100 : #ffffff,
+    A200 : #e8f0ff,
+    A400 : #b5cdff,
+    A700 : #9cbcff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// ING Brand
+/* For use in src/lib/core/theming/_palette.scss */
+$ipalette: (
+    50 : #ffece0,
+    100 : #ffd0b3,
+    200 : #ffb180,
+    300 : #ff914d,
+    400 : #ff7a26,
+    500 : #ff6200,
+    600 : #ff5a00,
+    700 : #ff5000,
+    800 : #ff4600,
+    900 : #ff3400,
+    A100 : #ffffff,
+    A200 : #fff4f2,
+    A400 : #ffc9bf,
+    A700 : #ffb3a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$my-primary: mat-palette($ipalette);
+$my-accent:  mat-palette($tpalette);
+
+$my-theme: mat-light-theme($my-primary, $my-accent);
+
+@include angular-material-theme($my-theme);
