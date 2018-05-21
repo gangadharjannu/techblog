@@ -1,0 +1,7 @@
+<mat-card *ngFor="let feed of feeds">
+  {{feed.title}}
+  <!-- <img src="{{src}}" alt="feed" mat-card-image> -->
+  <mat-card-actions>
+    <button (click)="goto(feed.link)" mat-button mat-raised-button>open</button>
+  </mat-card-actions>
+</mat-card>
